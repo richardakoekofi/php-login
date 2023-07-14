@@ -19,7 +19,8 @@ if (mysqli_num_rows($result) > 0) {
     $result = mysqli_query($connection, $query);
 
     if ($result) {
-        echo "Registration successful!";
+        //echo "Registration successful!";
+        header("Location: login.php");
     } else {
         echo "Error: " . mysqli_error($connection);
     }

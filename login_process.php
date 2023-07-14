@@ -12,6 +12,11 @@ $result = mysqli_query($connection, $query);
 
 if (mysqli_num_rows($result) > 0) {
     // Login successful
+   // if($password==$row["password"]){
+     //   $_SESSION["login"] = true;
+       // $_SESSION["id"] = $row["id"];
+        header("Location:home.php");
+    //}
     echo "Login successful!";
 } else {
     // Invalid username or password
